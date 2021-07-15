@@ -1,16 +1,14 @@
 # Garipov Bulat Rishatovich
-------------------------------------------
+
 Male, 27 December 2001
 
 + Cell: +7 987 214 1640
 + E-mail: insanbulat@gmail.com
-+ Telegram: @Bulation
++ Telegram: [@Bulation](https://t.me/bulation)
 
 Citizenship: Russia
 
 Location: Almetyevsk, Republic Tatarstan
-
---
 
 ## About myself
 
@@ -18,7 +16,7 @@ Location: Almetyevsk, Republic Tatarstan
 
 Passed USE (Unified State Exam) in Informatics with 92 points
 
-Purpose: finish rss course succesfully, get deep knowledge of frontend-developing and become a junior frontend-developer
+Purpose: finish RSS School succesfully, get deep knowledge of frontend-developing and become a junior frontend-developer
 
 Work experience: 
 
@@ -75,6 +73,6 @@ print(L, R)
 
 ## Level of English
 
-I have EF SET Certificate that certify me tha my level of English is B1 Intermediate
+I have EF SET Certificate that certify me that my level of English is B1 Intermediate
 
 [Link on certificate](https://www.efset.org/cert/FedyfJ)
