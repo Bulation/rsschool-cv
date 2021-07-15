@@ -18,7 +18,7 @@ Passed USE (Unified State Exam) in Informatics with 92 points
 
 Purpose: finish RSS School succesfully, get deep knowledge of frontend-developing and become a junior frontend-developer
 
-Work experience: 
+### Work experience: 
 
 + 2020-2021: Informatics USE (Unified State Exam) Mentor in online-school
 
