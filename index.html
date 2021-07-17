@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = 'stylesheet' href = 'style.css'>
+    <title>My CV</title>
 </head>
 <body>
     <header>
-        <img src="img/self.jpg" alt="My Photo">
-        <div>
+        <img src="img/self.jpg" alt="My Photo" class = "self">
+        <div class = 'headline'>
             <h1>Bulat Garipov</h1>
             <p>Beginning Frontend-Developer</p>
-        </div>
+        </div> 
     </header>
     <main>
-        <section>
+        <section class = 'first'>
             <h2>
-                About Myself
+                About me
             </h2>
-            <p>19 years old beginning frontend-developer, a young student. I'm interesting in programming from childhood, so for many years I have been trying to develop in this sphere. Now my main purpose is productive exploring of JavaScript with RSSchool
-            
-            My strenghs: patience, youth, good memory, skill of finding information quickly, ability to solve problems indepedently; passed USE (Unified State Exam) in Informatics with 92 points
+            <p>19 years old beginning frontend-developer, a young student, passed USE (Unified State Exam) in Informatics with 92 points. I'm interesting in programming from childhood, so for many years I have been trying to develop in this sphere. Now my main purpose is productive exploring of JavaScript with RSSchool.
             </p>
+            <h3>My strenghs</h3>
+            <ul>
+                <li>Patience</li>
+                <li>Good memory</li>
+                <li>Skill of finding information quickly</li>
+                <li>Ability to solve problems indepedently</li>
+            </ul>
             <h3>
-                Work Experience
+                Work experience
             </h3>
             <ul>
                 <li>2020-2021: Informatics USE Mentor in online-school</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact information</h2>
+            <ul>
+                <li>Citizenship: Russia</li>
+                <li>Location: Almetyevsk, Republic Tatarstan</li>
+                <li>Mobile: <a href="tel:+79872141640">+7 987 214 1640</a></li>
+                <li>E-mail: <a href="mailto:insanbulat@gmail.com">insanbulat@gmail.com</a></li>
+                <li>Telegram: <a href="http://t.me/bulation">@Bulation</a></li>
+                <li>Discord: Bulation#0685</li>
             </ul>
         </section>
         <section>
@@ -39,67 +56,57 @@
             </ul>
         </section>
         <section>
-            <h2>Code Example</h2>
-            <p>My solution of 27th task on Informatic USE that was in 2020 year
-            
-            Problem: You are given a sequence of N positive integers. Considered all pairs of elements of the sequence, the
-            difference of which is even, and in these pairs, at least one of the numbers in the pair is divisible by 33. The order
-            elements in a pair are unimportant. Among all such pairs, you need to find and print a pair with the maximum sum of
-            elements. If the same maximum sum has several pairs, you can print any of them. If matching pairs are not in the
-            sequence, you need to output two zeros.
-            
-            Solution on Python:</p>
-            <pre><code>
-            L = R = nech = nechkr33 = ch = chkr33 = 0
-            N = int(input())
-                for i in range(N):
-                    x = int(input())
-                    if x % 2 == 0 and x % 33 == 0:
-                        if x > chkr33:
-                            if chkr33 > ch:
-                                ch = chkr33
-                        chkr33 = x
-                    elif x % 2 == 0 and x % 33 != 0:
-                        if x > ch:
-                            ch = x
-                    elif x % 2 != 0 and x % 33 == 0:
-                        if x > nechkr33:
-                            if nechkr33 > nech:
-                                nech = nechkr33
-                            nechkr33 = x
-                    elif x % 2 != 0 and x % 33 != 0:
-                        if x > nech:
-                            nech = x
-            if nech + nechkr33 > L + R and nech != 0 and nechkr33 != 0:
-                L = nech
-                R = nechkr33
-            if ch + chkr33 > L + R and ch != 0 and chkr33 != 0:
-                L = ch
-                R = chkr33
-            print(L, R)
-        </code></pre>
-        </section>
-        <section>
             <h2>Level of English</h2>
             <p>I have <a href="https://www.efset.org/cert/FedyfJ">EF SET Certificate</a> that certify me that my level of English is B1 Intermediate</p>
         </section>
-        <section>
-            <h2>Contact Information</h2>
-            <ul>
-                <li>Citizenship: Russia</li>
-                <li>Location: Almetyevsk, Republic Tatarstan</li>
-                <li>Cell: <a href="tel:+79872141640">+7 987 214 1640</a></li>
-                <li>E-mail: <a href="mailto:insanbulat@gmail.com">insanbulat@gmail.com</a></li>
-                <li>Telegram: <a href="http://t.me/bulation">@Bulation</a></li>
-                <li>Discord: Bulation#0685</li>
-            </ul>
+        
+        <section class = 'last'>
+            <h2>Code example</h2>
+            <p>My solution of 27th task that was in 2020 year on Informatic USE</p>
+        
+            <p>Problem: You are given a sequence of N positive integers. Considered all pairs of elements of the sequence, the
+                difference of which is even, and in these pairs, at least one of the numbers in the pair is divisible by 33. The
+                order
+                elements in a pair are unimportant. Among all such pairs, you need to find and print a pair with the maximum sum
+                of
+                elements. If the same maximum sum has several pairs, you can print any of them. If matching pairs are not in the
+                sequence, you need to output two zeros.</p>
+        
+            <p>Solution on Python:</p><pre><code>
+L = R = nech = nechkr33 = ch = chkr33 = 0
+N = int(input())
+for i in range(N):
+    x = int(input())
+    if x % 2 == 0 and x % 33 == 0:
+        if x > chkr33:
+            if chkr33 > ch:
+                ch = chkr33
+            chkr33 = x
+    elif x % 2 == 0 and x % 33 != 0:
+        if x > ch:
+            ch = x
+    elif x % 2 != 0 and x % 33 == 0:
+        if x > nechkr33:
+            if nechkr33 > nech:
+                nech = nechkr33
+            nechkr33 = x
+    elif x % 2 != 0 and x % 33 != 0:
+        if x > nech:
+            nech = x
+if nech + nechkr33 > L + R and nech != 0 and nechkr33 != 0:
+    L = nech
+    R = nechkr33
+if ch + chkr33 > L + R and ch != 0 and chkr33 != 0:
+    L = ch
+    R = chkr33
+print(L, R)
+                            </code></pre>
         </section>
     </main>
     <footer>
-        <li><img src="img/github.jpg" alt="Link on my GitHub" ><a href="https://github.com/Bulation"></a>
-        </li>
-        <li><img src="img/rs_school_js.svg" alt="RSSchool course"><a href="https://rs.school/js/"></a></li>
-        <li>2021</li>
+        <a href="https://github.com/Bulation"><img src="img/github.jpg" alt="Link on my GitHub" class='github'></a>
+        <a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RSSchool course" class = 'svg'></a>
+        <p>2021</p>
     </footer>
 </body>
 </html>
