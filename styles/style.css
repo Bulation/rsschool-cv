@@ -6,6 +6,9 @@
     line-height: 150%;
     font-family: Lato, sans-serif;
 }
+body {
+    background-image: url(../img/bg.jpg);
+}
 @font-face {
     font-family: Kollektif;
     src: url(fonts/Kollektif/Kollektif-Bold.ttf);
@@ -72,9 +75,6 @@ footer {
 footer a {
     width: 50%;
     margin-right: 20px;
-}
-.github {
-    max-width: 100%;
 }
 @media screen and (max-width: 1024px) {
     section {
