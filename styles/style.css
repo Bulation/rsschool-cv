@@ -12,7 +12,9 @@
     font-family: Lato;
     src: url(fonts/Lato/Lato-Light.ttf);
 }
-h1, h2, h3 {
+h1, 
+h2, 
+h3 {
     font-family: Kollektif;
     text-transform: uppercase;
 }
@@ -31,8 +33,9 @@ p {
 li {
     list-style-type: circle;
 }
-
-main, header, footer {
+main, 
+header, 
+footer {
     margin: 0 auto;
     width: 50%;
 }
@@ -45,7 +48,7 @@ header {
     margin: auto 0;
     margin-left: 50px;
 }
-.self {
+.self-photo {
     margin-top:20px;
     display: block;
     border-radius: 50%;
@@ -59,13 +62,12 @@ section {
     max-width: 50%;
     padding: 30px;
 }
-.last {
+.last-section {
     max-width: 100%;
 }
 footer {
     display: flex;
     align-items: center;
-    
 }
 footer a {
     width: 50%;
@@ -79,9 +81,9 @@ footer a {
         max-width: 100%;
     }
     main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     h1 {
         font-size: 36px;
@@ -93,14 +95,16 @@ footer a {
     }
 }
 @media screen and (max-width: 480px) {
-    main, header, footer {
-    margin: 0 auto;
-    width: 100%;
+    main,
+    header, 
+    footer {
+        margin: 0 auto;
+        width: 100%;
     }
     section {
-    max-width: 100%;
+        max-width: 100%;
     }
     footer a {
-    width: 100%;
+        width: 100%;
     }
 }
