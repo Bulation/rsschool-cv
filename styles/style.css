@@ -41,24 +41,26 @@ header,
 footer {
     margin: 0 auto;
     width: 50%;
-}
-header {
+    background-color: white;
+    box-shadow: 0 50px 50px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
 }
 .headline {
     margin: auto 0;
+    max-width: 50%;
     margin-left: 50px;
 }
 .self-photo {
     margin-top:20px;
+    margin-left: 20px;
     display: block;
     border-radius: 50%;
     max-width: 50%;
 }
+header {
+    align-items: baseline;
+}
 main {
-    display: flex;
     flex-wrap: wrap;
 }
 section {
@@ -69,42 +71,47 @@ section {
     max-width: 100%;
 }
 footer {
-    display: flex;
     align-items: center;
 }
 footer a {
     width: 50%;
     margin-right: 20px;
 }
-@media screen and (max-width: 1024px) {
-    section {
-        max-width: 100%;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+footer p {
+    margin-right: 20px;
+}
+.github {
+    width: 100%;
+}
+@media screen and (max-width: 1280px) {
     h1 {
         font-size: 36px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1040px) {
     h1 {
         margin-top:30px;
-    }
-}
-@media screen and (max-width: 480px) {
-    main,
-    header, 
-    footer {
-        margin: 0 auto;
-        width: 100%;
+        font-size: 24px;
     }
     section {
         max-width: 100%;
     }
-    footer a {
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 900px) {
+    main,
+    header, 
+    footer {
         width: 100%;
+        box-shadow: none;
+    }
+    body {
+        background-image: none;
+    }
+    section {
+        max-width: 100%;
     }
 }
