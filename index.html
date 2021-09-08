@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="icons/title-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
     <title>My CV</title>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img class="self-photo" src="img/self.jpg" alt="My Photo">
+            <div class="header__hamburger hamburger"><span class="hamburger__line"></span></div>
             <div class="headline">
-                <h1>Bulat Garipov</h1>
-                <p>Beginning Frontend-Developer</p>
+                <img class="self-photo" src="img/self.jpg" alt="My Photo">
+                <div>
+                    <h1>Bulat Garipov</h1>
+                    <p>Beginning Frontend-Developer</p>
+                </div>
             </div>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#english">English</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#code">Code</a></li>
+                </ul>
+            </nav>
         </div> 
     </header>
     <main>
         <div class="section-container">
-            <section>
+            <section id="about">
                 <h2>About me</h2>
-                <p>19 years old beginning frontend-developer, a young student, passed USE (Unified State Exam) in Informatics with 92
+                <p>19 years old beginning frontend-developer, a young student, passed <mark title="Unified State Exam">USE</mark> in Informatics for 92
                 points. I'm interesting in programming from childhood, so for many years I have been trying to develop in this
                 sphere. Now my main purpose is productive exploring of JavaScript with RSSchool.</p>
                 <h3>My strenghs</h3>
@@ -39,37 +58,19 @@
                 </ul>
             </section>
 
-            <section>
+            <section id="contacts">
                 <h2>Contact information</h2>
                 <ul class="contacts">
-                    <li>
-                        <img class="icon rus" src="icons/rus.svg" width="32" height="32" alt="Russia">
-                        <p>Citizenship: Russia</p>
-                    </li>
-                    <li>
-                        <img class="icon tat" src="icons/tat.png" width="32" height="32" alt="Tatarstan">
-                        <p>Location: Almetyevsk, Republic Tatarstan</p>
-                    </li>
-                    <li>
-                        <img class="icon phone" src="icons/phone.svg" width="32" height="32" alt="Mobile phone">
-                        <a href="tel:+79872141640">+7 987 214 1640</a>
-                    </li>
-                    <li>
-                        <img class="icon email" src="icons/email.svg" width="32" height="32" alt="E-Mail">
-                        <a href="mailto:insanbulat@gmail.com">insanbulat@gmail.com</a>
-                    </li>
-                    <li>
-                        <img class="icon telegram" src="icons/tg.svg" width="32" height="32" alt="Telegram">
-                        <a href="http://t.me/bulation">@Bulation</a>
-                    </li>
-                    <li>
-                        <img class="icon discord" src="icons/discord.svg" width="32" height="32" alt="Discord">
-                        <p>Bulation#0685</p>
-                    </li>
+                    <li class="rus">Citizenship: Russia</li>
+                    <li class="tat">Location: Almetyevsk, Republic Tatarstan</li>
+                    <li class="phone"><a href="tel:+79872141640">+7 987 214 1640</a></li>
+                    <li class="email"><a href="mailto:insanbulat@gmail.com">insanbulat@gmail.com</a></li>
+                    <li class="tg"><a href="http://t.me/bulation">@Bulation</a></li>
+                    <li class="discord"><a href="http://discord.com/users/222664316459941890">Bulation#0685</a></li>
                 </ul>
             </section>
             
-            <section>
+            <section id="skills">
                 <h2>Skills</h2>
                 <ul>
                     <li>Basic knowledge of C++, Python, PascalABC.Net, JavaScript</li>
@@ -78,17 +79,33 @@
                 </ul>
             </section>
             
-            <section>
+            <section id="english">
                 <h2>Level of English</h2>
-                <p>I have <a href="https://www.efset.org/cert/FedyfJ">EF SET Certificate</a> that certify me that my level of English is B1 Intermediate</p>
+                <p>I have <a href="https://www.efset.org/cert/FedyfJ">EF SET Certificate</a> certified me that my level of English is B1 Intermediate</p>
             </section>
             
-            <section class="last-section">
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>RSSchool July 2021 — September 2021: Finished stage0 with a <a href="https://app.rs.school/certificate/gx1130yf">sertificate</a></li>
+                </ul>
+            </section>
+
+            <section id="projects" class="long-section">
+                <h2>My Projects</h2>
+                <ul>
+                    <li><a href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/drum-kit/">Drum-Kit<img src="img/drum-kit.png" alt="Drum-Kit Project"></a></li>
+                    <li><a href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/custom-video-player/">Custom Video Player<img src="img/player.png" alt="Custom Video Player Project"></a></li>
+                    <li><a href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/museum">Museum<img src="img/museum.png" alt="Museum Project"></a></li>
+                </ul>
+            </section>
+
+            <section  id="code" class="long-section">
                 <h2>Code example</h2>
                 <p>My solution of 27th task that was in 2020 year on Informatic USE.</p>
                 <p>Problem: You are given a sequence of N positive integers. Considered all pairs of elements of the sequence, the difference of which is even, and in these pairs, at least one of the numbers in the pair is divisible by 33. The order elements in a pair are unimportant. Among all such pairs, you need to find and print a pair with the maximum sum of elements. If the same maximum sum has several pairs, you can print any of them. If matching pairs are not in the sequence, you need to output two zeros.</p>
                 <p>Solution on Python:</p>
-                <pre><code>L = R = nech = nechkr33 = ch = chkr33 = 0
+                <pre><code class="py">L = R = nech = nechkr33 = ch = chkr33 = 0
 N = int(input())
 for i in range(N):
     x = int(input())
@@ -122,8 +139,9 @@ print(L, R)</code></pre>
         <div class="footer-container">
             <a href="https://github.com/Bulation"><img class="github" src="img/github.png" alt="Link on my GitHub"></a>
             <a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RSSchool course"></a>
-            <p>2021</p>
+            <time>2021</time>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
