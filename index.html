@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
+        <div class="container header-container">
             <div class="header__hamburger hamburger"><span class="hamburger__line"></span></div>
             <div class="headline">
                 <img class="self-photo" src="img/self.jpg" alt="My Photo">
@@ -25,24 +25,37 @@
                     <p>Beginning Frontend-Developer</p>
                 </div>
             </div>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#english">English</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#code">Code</a></li>
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-list__item"><a href="#about">About</a></li>
+                    <li class="navigation-list__item"><a href="#contacts">Contacts</a></li>
+                    <li class="navigation-list__item"><a href="#skills">Skills</a></li>
+                    <li class="navigation-list__item"><a href="#english">English</a></li>
+                    <li class="navigation-list__item"><a href="#education">Education</a></li>
+                    <li class="navigation-list__item"><a href="#projects">Projects</a></li>
+                    <li class="navigation-list__item"><a href="#code">Code</a></li>
                 </ul>
             </nav>
         </div> 
     </header>
     <main>
-        <div class="section-container">
+        <div class="side-menu">
+            <div class="close"></div>
+            <ul class="side-menu-navigation">
+                <li class="navigation-list__item"><a href="#about">About</a></li>
+                <li class="navigation-list__item"><a href="#contacts">Contacts</a></li>
+                <li class="navigation-list__item"><a href="#skills">Skills</a></li>
+                <li class="navigation-list__item"><a href="#english">English</a></li>
+                <li class="navigation-list__item"><a href="#education">Education</a></li>
+                <li class="navigation-list__item"><a href="#projects">Projects</a></li>
+                <li class="navigation-list__item"><a href="#code">Code</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="container section-container">
             <section id="about">
                 <h2>About me</h2>
-                <p>19 years old beginning frontend-developer, a young student, passed <mark title="Unified State Exam">USE</mark> in Informatics for 92
+                <p>I am 19 years old beginning frontend-developer, a young student, passed <mark title="Unified State Exam">USE</mark> in Informatics for 92
                 points. I'm interesting in programming from childhood, so for many years I have been trying to develop in this
                 sphere. Now my main purpose is productive exploring of JavaScript with RSSchool.</p>
                 <h3>My strenghs</h3>
@@ -73,7 +86,7 @@
             <section id="skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li>Basic knowledge of C++, Python, PascalABC.Net, JavaScript</li>
+                    <li>Basic knowledge of C++, Python, PascalABC.Net, JavaScript, SASS</li>
                     <li>Begin to study Git</li>
                     <li>Knowledge solving methods of USE tasks and school stage of Russian Olympiad for schoolchildren</li>
                 </ul>
@@ -136,7 +149,7 @@ print(L, R)</code></pre>
         </div>
     </main>
     <footer>
-        <div class="footer-container">
+        <div class="container footer-container">
             <a href="https://github.com/Bulation"><img class="github" src="img/github.png" alt="Link on my GitHub"></a>
             <a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RSSchool course"></a>
             <time>2021</time>
