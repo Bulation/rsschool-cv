@@ -7,6 +7,8 @@ const closeMenu = document.querySelector('.close')
 
 closeMenu.addEventListener('click', toggleHamburger);
 hamburger.addEventListener('click', toggleHamburger);
+for (let item of sideMenuItems)
+   item.addEventListener("click", toggleActiveClass);
 
 for (let container of containers) {
   container.addEventListener("click", hideMenuByClickOnBody);
@@ -26,4 +28,10 @@ function toggleHamburger(e) {
 function hideMenuByClickOnBody(e) {
   if (!e.target.closest(".navigation") && !e.target.closest(".hamburger") && !closeMenu.matches(".hidden"))
     toggleHamburger(e);
+}
+
+function toggleActiveClass(e) {
+    for (let item of sideMenuItems)
+      item.firstChild.classList.remove("active");
+    e.target.classList.add('active')
 }
