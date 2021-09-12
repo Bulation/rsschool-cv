@@ -94,7 +94,7 @@ li {
     list-style-type: none;
 }
 .navigation-list__link {
-    color: black;
+    color: #000000;
 }
 a:not(footer a):hover, .active {  
     color: #32CD32; 
@@ -197,9 +197,53 @@ footer time {
 .github {
     width: 100%;
 }
-code {
+pre, code {
     display: block;
-    overflow-x: scroll;
+    white-space: pre-wrap;
+}
+.project {
+    display: block;
+    background-color: #ffffff;
+    box-shadow: 0 0px 30px;
+    margin: 50px 0;
+    transition: transform, 0.3s;
+}
+.project-link {
+    display: block;
+    position: relative;
+}
+.projects ul {
+    padding: 0;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+.project:hover .project-description {
+    display: block;
+}
+.project:hover .project__img {
+    filter: blur(20px);
+}
+.project-description {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.project-description__text {
+    margin: 0;
+}
+.project__img {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 0;
+    transition: filter 0.3s;
 }
 .close {
     position: absolute;
@@ -227,22 +271,16 @@ code {
     height: 31px;
     background: #173A56;
 }
-.project {
-    margin: 30px 0;
-}
 .transform {
     transform: translateX(0%);
 }
 .backFogging {
     background: rgba(0,0,0,0.6);
 }
-.black {
-    background-color: rgba(0,0,0,0);
-}
 .hidden {
     display: none;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     .section-container,
     .header-container, 
     .footer-container {
@@ -252,6 +290,9 @@ code {
     }
     body {
         background-image: none;
+    }
+    section {
+        padding-left: 0;
     }
     .header-container {
         justify-content: normal;
@@ -280,21 +321,22 @@ code {
         margin-top: 20px;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .headline {
         flex-direction: column;
     }
     .header-container {
         flex-wrap: nowrap;
     }
-}
-@media screen and (max-width: 600px) {
     section {
         width: 100%;
-        padding-left: 0;
+        padding: 30px 0;
+    }
+    .project-img {
+        width: 100%;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     h1 {
         font-size: 1.4em;
     }
