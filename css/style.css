@@ -65,7 +65,7 @@ h3 {
     text-transform: uppercase;
 }
 mark {
-    background-color: white;
+    background-color: #ffffff;
     text-decoration: underline;
 }
 ul {
@@ -278,7 +278,7 @@ pre, code {
     background: rgba(0,0,0,0.6);
 }
 .black {
-    background: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
 }
 .hidden {
     display: none;
