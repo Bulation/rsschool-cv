@@ -2,9 +2,10 @@
 
 Male, 27 December 2001
 
-+ Cell: +7 987 214 1640
++ Phone: +7 987 214 1640
 + E-mail: insanbulat@gmail.com
 + Telegram: [@Bulation](https://t.me/bulation)
++ Discord: [Bulation#0685](http://discord.com/users/222664316459941890)
 
 Citizenship: Russia
 
@@ -12,11 +13,7 @@ Location: Almetyevsk, Republic Tatarstan
 
 ## About myself
 
-19 years old beginning frontend-developer, young student, who can study quickly and really wants explore programming
-
-Passed USE (Unified State Exam) in Informatics with 92 points
-
-Purpose: finish RSS School succesfully, get deep knowledge of frontend-developing and become a junior frontend-developer
+I am 19 years old beginning frontend-developer, a young student, passed USE in Informatics for 92 points. I'm interesting in programming from childhood, so for many years I have been trying to develop in this sphere. Now my main purpose is productive exploring of JavaScript with RSSchool.
 
 ### Work experience: 
 
@@ -24,8 +21,8 @@ Purpose: finish RSS School succesfully, get deep knowledge of frontend-developin
 
 ## Skills
 
-+ Basic knowledge of C++, Python, PascalABC.Net, JavaScript
-+ Begin to study Git
++ Basic knowledge of C++, Python, PascalABC.Net, JavaScript, SASS, Git
++ Knowledge solving methods of USE tasks and school stage of Russian Olympiad for schoolchildren
 
 ## Code Example
 
@@ -76,3 +73,9 @@ print(L, R)
 I have EF SET Certificate that certify me that my level of English is B1 Intermediate
 
 [Link on certificate](https://www.efset.org/cert/FedyfJ)
+
+## My Projects
+
++ [Drum-Kit](https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/drum-kit/): JS30 project where you can play by keys or mouse on drum or piano. Technologies that I used: HTML, CSS, JS, SVG
++ [Custom Video Player](https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/custom-video-player/): Custom player for museum task. Added almost all YouTube player functional. Technologies that I used: HTML, CSS, JS, SVG, BEM
++ [Museum](https://rolling-scopes-school.github.io/bulation-JSFE2021Q3/museum-dom): Adaptive landing that i made on stage0-1. Technologies that I used: HTML, SASS, SVG, BEM, JS, Webpack
