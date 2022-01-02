@@ -4,6 +4,11 @@ const sideMenuItems = document.querySelectorAll(".navigation-list__item");
 const containers = document.querySelectorAll('.container')
 const mark = document.querySelector('mark')
 const closeMenu = document.querySelector('.close')
+const sliderContainer = document.querySelector('.project-list');
+const sliderImages = document.querySelectorAll('.project');
+const bulletsContainer = document.querySelector('.project-pagination');
+const bullets = document.querySelectorAll('.project-pagination__item');
+const arrows = document.querySelectorAll('.project__control');
 
 closeMenu.addEventListener('click', toggleHamburger);
 hamburger.addEventListener('click', toggleHamburger);
@@ -36,38 +41,159 @@ function toggleActiveClass(e) {
     e.target.classList.add('active')
 }
 
-console.log('Вёрстка валидная +10')
-console.log("Вёрстка семантическая +20. Присутствуют семантические теги header, nav, main, section, mark, footer, time, заголовки h1-h3 - +2 балла за каждый тег, итого 20/20");
-console.log("Для оформления СV используются css-стили +10");
-console.log(
-  "Контент размещается в блоке, который горизонтально центрируется на странице. Фоновая картинка тянется во всю ширину страницы +10"
+class Slider {
+	constructor(container, items, bulletsContainer, bullets, arrows, currentNum, activeClass, transformPercent) {
+		this.container = container;
+		this.items = items;
+		this.itemsLength = items.length;
+		this.bulletsContainer = bulletsContainer;
+		this.bullets = bullets;
+		this.arrows = arrows;
+		this.currentNum = currentNum || null;
+		this.activeClass = activeClass;
+		this.transformPercent = transformPercent;
+		this.previousSlide = null;
+		this.currentSlide = 1;
+		this.isEnabled = true;
+	}
+
+	clonePrepend(ind) {
+		this.container.prepend(this.items[this.items.length - ind].cloneNode(true));
+	}
+
+	cloneAppend(ind) {
+		this.container.append(this.items[ind].cloneNode(true));
+	}
+
+	slideElements(n) {
+    console.log(n, this.previousSlide)
+		this.previousSlide = this.currentSlide;
+		this.currentSlide = n;
+		this.activateBullet(this.previousSlide, this.currentSlide);
+		if (this.currentNum != null) this.changeSlideNumber(this.currentSlide);
+		this.container.classList.add('transition-slider');
+		this.container.style.transform = `translate(${-this.transformPercent * this.currentSlide}%, 0)`;
+		if (this.currentSlide === this.itemsLength + 1 || this.currentSlide === 0) {
+			this.container.addEventListener('transitionend', this.InfiniteLoop.bind(this), { once: true });
+		}
+	}
+
+	changeSlideNumber(n) {
+		if (n === this.itemsLength + 1) n = 1;
+		if (n === 0) n = this.itemsLength;
+		this.currentNum.innerHTML = '0' + n;
+	}
+
+	activateBullet(prev, cur) {
+		let previousBullet = (prev - 1 + this.bullets.length) % this.bullets.length;
+		let currentBullet = (cur - 1 + this.bullets.length) % this.bullets.length;
+		this.bullets[previousBullet].classList.remove(this.activeClass);
+		this.bullets[currentBullet].classList.add(this.activeClass);
+	}
+
+	InfiniteLoop() {
+		if (this.currentSlide === 0) {
+			this.container.style.transform = `translate(${-this.transformPercent * this.itemsLength}%, 0)`;
+			this.currentSlide = this.itemsLength;
+		} else if (this.currentSlide === this.itemsLength + 1) {
+			this.container.style.transform = `translate(${-this.transformPercent * 1}%, 0)`;
+			this.currentSlide = 1;
+		}
+	}
+
+	enableSliding() {
+		this.isEnabled = !this.isEnabled;
+	}
+
+	swipeDetect(el) {
+		let startX;
+		let finishX;
+		let finishY;
+		let startY;
+		let startTime;
+		let finishTime;
+		let allowedTime = 100;
+		let distanceX;
+		let distanceY;
+		let allowedDistanceY = 300;
+		let allowedDistanceX = 50;
+		el.addEventListener('mousedown', (e) => {
+			e.preventDefault();
+			startX = e.pageX;
+			startY = e.pageY;
+			startTime = new Date();
+		});
+		el.addEventListener('touchstart', (e) => {
+			e.preventDefault();
+			startX = e.changedTouches[0].pageX;
+			startY = e.changedTouches[0].pageY;
+			startTime = new Date();
+		});
+		el.addEventListener('touchmove', (e) => {
+			e.preventDefault();
+		});
+		el.addEventListener('touchend', (e) => {
+			finishX = e.changedTouches[0].pageX;
+			finishY = e.changedTouches[0].pageY;
+			distanceX = Math.abs(finishX - startX);
+			distanceY = Math.abs(finishY - startY);
+			finishTime = new Date();
+			if (distanceX > allowedDistanceX && distanceY < allowedDistanceY && finishTime - startTime > allowedTime && this.isEnabled) {
+				if (distanceX === finishX - startX) this.slideElements(this.currentSlide - 1);
+				else this.slideElements(this.currentSlide + 1);
+			}
+		});
+		el.addEventListener('mouseup', (e) => {
+			finishX = e.pageX;
+			finishY = e.pageY;
+			distanceX = Math.abs(finishX - startX);
+			distanceY = Math.abs(finishY - startY);
+			finishTime = new Date();
+			if (distanceX > allowedDistanceX && distanceY < allowedDistanceY && finishTime - startTime > allowedTime && this.isEnabled) {
+				if (distanceX === finishX - startX) this.slideElements(this.currentSlide + 1);
+				else this.slideElements(this.currentSlide - 1);
+			}
+		});
+	}
+}
+let activeClass = 'project-pagination__item_active';
+let slider = new Slider(
+	sliderContainer,
+	sliderImages,
+	bulletsContainer,
+	bullets,
+	arrows,
+	null,
+	activeClass,
+	100
 );
-console.log(
-  "Вёрстка адаптивная: ни на одном из разрешений экрана до 320px включительно не появляется горизонтальная полоса прокрутки, при этом всё содержание страницы сохраняется +10"
-);
-console.log(
-  "Eсть меню. Ссылки в пунктах меню ведут на основные разделы CV. При кликах по пунктам меню реализована плавная прокрутка по якорям. При уменьшении ширины экрана меню становится адаптивным. +10"
-);
-console.log(
-  "На странице СV присутствует изображение, пропорции изображения не искажены, у изображения есть атрибут alt +10"
-);
-console.log(
-  "Контакты для связи и перечень навыков оформлены в виде списка ul > li +10"
-);
-console.log(
-  "CV содержит контакты для связи, краткую информацию о себе, перечень навыков, информацию об образовании и уровне английского +10"
-);
-console.log(
-  "CV содержит пример кода с подсветкой +10"
-);
-console.log(
-  "CV содержит изображения-ссылки на выполненные проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий. ВСЕ ЭТО ОТОБРАЖАЕТСЯ ЕСЛИ НАВЕСТИ МЫШКОЙ НА КАЖДЫЙ ПРОЕКТ. +10"
-);
-console.log("CV выполнено на английском языке +10");
-console.log(
-  "Выполнены требования к Pull Request: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, выполнена самооценка +10"
-);
-console.log(
-  "Дизайн, оформление, качество выполнения CV не ниже чем в примерах CV, приведённых в материалах к заданию +10"
-);
-console.log('Итого: 150/160')
+
+slider.cloneAppend(0);
+slider.clonePrepend(1);
+sliderContainer.addEventListener("transitionstart", () => {
+  slider.enableSliding();
+});
+sliderContainer.addEventListener("transitionend", () => {
+  slider.enableSliding();
+  sliderContainer.classList.remove("transition-slider");
+});
+bulletsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("project-pagination__item"))
+    slider.slideElements(
+      Number(e.target.dataset.count)
+    );
+});
+
+arrows[0].addEventListener("click", () => {
+  if (!sliderContainer.classList.contains("transition-slider"))
+    slider.slideElements(
+      slider.currentSlide - 1
+    );
+});
+arrows[1].addEventListener("click", () => {
+  if (!sliderContainer.classList.contains("transition-slider"))
+    slider.slideElements(
+      slider.currentSlide + 1
+    );
+});
+slider.swipeDetect(sliderContainer);
