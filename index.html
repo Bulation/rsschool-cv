@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="icons/title-icon.png">
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/gradient-light.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <title>My CV</title>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header__hamburger hamburger"><span class="hamburger__line"></span></div>
+            <div class="headline">
+                <img class="self-photo" src="img/self.jpg" alt="My Photo">
+                <div>
+                    <h1>Bulat Garipov</h1>
+                    <p>Beginning Frontend-Developer</p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <div class="close hidden"></div>
+                <ul class="navigation-list">
+                    <li class="navigation-list__item"><a class="navigation-list__link active" href="#about">About</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#contacts">Contacts</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#skills">Skills</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#english">English</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#education">Education</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#projects">Projects</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link" href="#code">Code</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    <main>
+        <div class="container section-container">
+            <section id="about">
+                <h2>About me</h2>
+                <p>I am 19 years old beginning frontend-developer, a young student, passed <mark title="Unified State Exam">USE</mark> in Informatics for 92
+                points. I'm interesting in programming from childhood, so for many years I have been trying to develop in this
+                sphere. Now my main purpose is productive exploring of JavaScript with RSSchool.</p>
+                <h3>My strenghs</h3>
+                <ul>
+                    <li>Patience</li>
+                    <li>Good memory</li>
+                    <li>Skill of finding information quickly</li>
+                    <li>Ability to solve problems indepedently</li>
+                </ul>
+                <h3>Work experience</h3>
+                <ul>
+                    <li>2020-2021: Informatics USE Mentor in online-school</li>
+                </ul>
+            </section>
+
+            <section id="contacts">
+                <h2>Contact information</h2>
+                <ul class="contacts">
+                    <li class="rus">Citizenship: Russia</li>
+                    <li class="tat">Location: Almetyevsk, Republic Tatarstan</li>
+                    <li class="phone"><a href="tel:+79872141640">+7 987 214 1640</a></li>
+                    <li class="email"><a href="mailto:insanbulat@gmail.com">insanbulat@gmail.com</a></li>
+                    <li class="tg"><a href="http://t.me/bulation">@Bulation</a></li>
+                    <li class="discord"><a href="http://discord.com/users/222664316459941890">Bulation#0685</a></li>
+                </ul>
+            </section>
+            
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Basic knowledge of C++, Python, PascalABC.Net, JavaScript, SASS</li>
+                    <li>Begin to study Git</li>
+                    <li>Knowledge solving methods of USE tasks and school stage of Russian Olympiad for schoolchildren</li>
+                </ul>
+            </section>
+            
+            <section id="english">
+                <h2>Level of English</h2>
+                <p>I have <a href="https://www.efset.org/cert/FedyfJ">EF SET Certificate</a> certified me that my level of English is B1 Intermediate</p>
+            </section>
+            
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>RSSchool July 2021 — September 2021: Finished stage0 with a <a href="https://app.rs.school/certificate/gx1130yf">sertificate</a></li>
+                </ul>
+            </section>
+
+            <section id="projects" class="projects long-section">
+                <h2 class="projects__title">My Projects</h2>
+                <div class="projects-carousel">
+                  <div class="project__control project__control_left">
+                    <div class="project__arrow project__arrow_left">&lt;</div>
+                  </div>
+                  <div class="projects-container">
+                    <ul class="project-list">
+                      <li class="project drum-kit">
+                        <a class="project-link" target="_blank"
+                          href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/drum-kit/">
+                          <img class="project__img" src="img/drum-kit.png" alt="Drum Kit">
+                          <div class="project-description">
+                            <h3 class="project-description__title">Drum-Kit</h3>
+                            <p class="project-description__text">JS30 project where you can play by keys or mouse on drum or piano</p>
+                            <p class="project-description__text">Technologies that I used: HTML, CSS, JS, SVG</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project player">
+                        <a class="project-link" target="_blank"
+                          href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/custom-video-player/">
+                          <img class="project__img" src="img/player.png" alt="Custom Video Player">
+                          <div class="project-description">
+                            <h3 class="project-description__title">Custom Video Player</h3>
+                            <p class="project-description__text">Custom player for museum task. Added almost all YouTube player functional
+                            </p>
+                            <p class="project-description__text">Technologies that I used: HTML, CSS, JS, SVG, BEM</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="project museum">
+                        <a class="project-link" target="_blank"
+                          href="https://rolling-scopes-school.github.io/bulation-JSFEPRESCHOOL/museum">
+                          <img class="project__img" src="img/museum.png" alt="museum">
+                          <div class="project-description">
+                            <h3 class="project-description__title">Museum</h3>
+                            <p class="project-description__text">Adaptive landing that i made on stage0</p>
+                            <p class="project-description__text">Technologies that I used: HTML, SASS, SVG, BEM</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="project__control project__control_right">
+                    <div class="project__arrow project__arrow_right">&gt;</div>
+                  </div>
+                </div>
+                <ul class="project-pagination">
+                  <li data-count='1' class="project-pagination__item project-pagination__item_active"></li>
+                  <li data-count='2' class="project-pagination__item"></li>
+                  <li data-count='3' class="project-pagination__item"></li>
+                </ul>
+            </section>
+
+            <section id="code" class="long-section">
+                <h2>Code example</h2>
+                <p>My solution of 27th task that was in 2020 year on Informatic USE.</p>
+                <p>Problem: You are given a sequence of N positive integers. Considered all pairs of elements of the sequence, the difference of which is even, and in these pairs, at least one of the numbers in the pair is divisible by 33. The order elements in a pair are unimportant. Among all such pairs, you need to find and print a pair with the maximum sum of elements. If the same maximum sum has several pairs, you can print any of them. If matching pairs are not in the sequence, you need to output two zeros.</p>
+                <p>Solution on Python:</p>
+                <pre><code class="py">L = R = nech = nechkr33 = ch = chkr33 = 0
+N = int(input())
+for i in range(N):
+    x = int(input())
+    if x % 2 == 0 and x % 33 == 0:
+        if (x > chkr33):
+            if chkr33 > ch:
+                ch = chkr33
+            chkr33 = x
+    elif x % 2 == 0 and x % 33 != 0:
+        if x > ch:
+           ch = x
+    elif x % 2 != 0 and x % 33 == 0:
+        if x > nechkr33:
+            if nechkr33 > nech:
+                nech = nechkr33
+            nechkr33 = x
+    elif x % 2 != 0 and x % 33 != 0:
+        if x > nech:
+            nech = x
+if nech + nechkr33 > L + R and nech != 0 and nechkr33 != 0:
+    L = nech
+    R = nechkr33
+if ch + chkr33 > L + R and ch != 0 and chkr33 != 0:
+    L = ch
+    R = chkr33
+print(L, R)</code></pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer-container">
+            <a href="https://github.com/Bulation"><img class="github" src="img/github.png" alt="Link on my GitHub"></a>
+            <a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RSSchool course"></a>
+            <time>2021</time>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
