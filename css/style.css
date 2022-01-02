@@ -213,6 +213,12 @@ pre, code {
     transition: transform, 0.3s;
     flex-shrink: 0;
 }
+.projects__title {
+  padding-left: 30px;
+}
+.transition-slider {
+  transition: transform 0.5s;
+}
 .project-pagination {
   display: flex;
   justify-content: center;
@@ -253,6 +259,7 @@ pre, code {
 }
 .project-list {
   display: flex;
+  transform: translate(-100%);
 }
 .project-link {
     display: block;
